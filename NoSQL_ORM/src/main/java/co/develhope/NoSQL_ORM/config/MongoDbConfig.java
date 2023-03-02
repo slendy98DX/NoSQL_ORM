@@ -26,7 +26,7 @@ public class MongoDbConfig extends AbstractMongoClientConfiguration {
 
     @Override
     public MongoClient mongoClient() {
-        ConnectionString connectionString = new ConnectionString("mongodb+srv://slendy98:qwerty12345678910#@cluster0.rvogfzc.mongodb.net/NoSQL_orm_exercise?retryWrites=true&w=majority");
+        ConnectionString connectionString = new ConnectionString("mongodb+srv://<usernamehere>:<passwordhere>@cluster0.rvogfzc.mongodb.net/NoSQL_orm_exercise?retryWrites=true&w=majority");
         MongoClientSettings mongoClientSettings = MongoClientSettings.builder().
                 applyConnectionString(connectionString).build();
         return MongoClients.create(mongoClientSettings);
